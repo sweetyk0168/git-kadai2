@@ -33,11 +33,11 @@
 
 <%= form_with model: @book do |f| %>
 
-<h4>Title</h4>
+<div class="comment-div">Title</div>
 <%= f.text_field :title %>
-<h4>Body</h4>
+<div class="comment-div">Body</div>
 <%= f.text_area :body %>
 
-<span class="comment-button"><%= f.submit 'Create Book' %></span>
+<div class="comment-button"><%= f.submit 'Create Book' %></div>
 <% end %>
 

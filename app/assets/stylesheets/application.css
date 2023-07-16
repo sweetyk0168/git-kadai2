@@ -40,7 +40,6 @@ h1 {
 p {
   display: block;
   font-size: 13px;
-  line-height: 18px;
   margin: 33px;
 }
 
@@ -53,9 +52,7 @@ table {
 th {
   display: table-cell;
   padding-bottom: 5px;
-  vertical-align: inherit;
   font-weight: bold;
-  text-align: -internal-center;
   font-size: 13px;
 }
 
@@ -65,12 +62,18 @@ h2 {
 }
 
 h4 {
-    font-size: 13px;
-    margin: 0px;
+  font-size: 13px;
+  margin: 0px;
 }
 
-.comment-button　{
-  position: absolute;
-  padding: 1px 6px;
-  border: 0px;
+div {
+  display: block;
+}
+
+.comment-div {
+  margin: 2px;
+}
+
+.comment-button {
+  margin: 10px 0;
 }

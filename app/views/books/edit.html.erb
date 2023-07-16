@@ -1,14 +1,23 @@
 <h1>Editing Book</h1>
+<% if @book.errors.any? %>
+ <%= @book.errors.count %>件のエラーが発生しました
+ <ul>
+   <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+   <% end %>
+ </ul>
+<% end %>
+
 <%= form_with model: @book,url: book_path(@book.id), method: :patch do |f| %>
 
-<h2>Title</h2>
+<div class="comment-div">Title</div>
 <%= f.text_field :title %>
 
-<h2>Body</h2>
+<div class="comment-div">Body</div>
 <%= f.text_area :body %>
 
-<%= f.submit 'Update Book' %>
-<%= link_to "Show","/books/#{@book.id}" %>
+<div class="comment-button"><%= f.submit 'Update Book' %></div>
+<%= link_to "Show","/books/#{@book.id}" %> |
 <%= link_to "Back","/books" %>
 
 <% end %>
